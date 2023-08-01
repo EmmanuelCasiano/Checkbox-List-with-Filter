@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkbox List with Filter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Checkbox List with Filter</h1>
+  <div class="search-container">
+    <label for="filter">Filter Names:</label>
+    <input type="text" id="filter" oninput="filterNames()" placeholder="Type to filter">
+  </div>
+  <form id="nameForm" onsubmit="saveSelectedNames()">
+    <div class="checkbox-container">
+      <div class="checked-items" id="checkedItems"></div>
+      <div class="checkbox-list" id="checkboxList">
+        <!-- Checkbox items will be dynamically generated here -->
+      </div>
+    </div>
+    <input type="hidden" name="selectedNames" id="selectedNamesInput">
+    <button type="submit">Save Selected Names</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
